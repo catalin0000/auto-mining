@@ -63,12 +63,14 @@ template_images_paths = [
 
 # Main loop
 while True:
+    pyautogui.press('z')
     # Find any of the ores on the screen
     ore_location = find_template_on_screen(template_images_paths, threshold=0.6)
 
     if ore_location:
         # Click the ore if found
         click_on_location(ore_location)
+        pyautogui.press('z')
 
 
 
